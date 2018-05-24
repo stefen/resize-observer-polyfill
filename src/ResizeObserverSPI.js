@@ -77,10 +77,6 @@ export default class ResizeObserverSPI {
             return;
         }
 
-        if (!(target instanceof getWindowOf(target).Element)) {
-            throw new TypeError('parameter 1 is not of type "Element".');
-        }
-
         const observations = this.observations_;
 
         // Do nothing if element is already being observed.
@@ -110,10 +106,6 @@ export default class ResizeObserverSPI {
         // Do nothing if current environment doesn't have the Element interface.
         if (typeof Element === 'undefined' || !(Element instanceof Object)) {
             return;
-        }
-
-        if (!(target instanceof getWindowOf(target).Element)) {
-            throw new TypeError('parameter 1 is not of type "Element".');
         }
 
         const observations = this.observations_;

@@ -1,9 +1,3 @@
-(function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-	typeof define === 'function' && define.amd ? define(factory) :
-	(global.ResizeObserver = factory());
-}(this, (function () { 'use strict';
-
 /**
  * A collection of shims that provide minimal functionality of the ES6 collections.
  *
@@ -1019,6 +1013,4 @@ var index = (function () {
     return ResizeObserver;
 })();
 
-return index;
-
-})));
+export default index;
